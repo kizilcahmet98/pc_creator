@@ -28,15 +28,15 @@ while True:
     elif x == 3:
         asus.kapat()
     elif x == 4:
-        asus.cpu_degistir()
+        asus.sahibi_degistir()
     elif x == 5:
-        asus.gpu_degistir()
+        asus.cpu_degistir()
     elif x == 6:
         asus.ram_degistir()
     elif x == 7:
-        asus.psu_degistir()
+        asus.gpu_degistir()
     elif x == 8:
-        asus.depolama()
+        asus.depolama_degistir()
     elif x == 9:
         asus.psu_degistir()
     else:
