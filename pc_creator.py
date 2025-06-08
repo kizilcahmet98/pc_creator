@@ -1,4 +1,4 @@
-from creat import Pc
+from create import Pc
 
 asus = Pc()
 
@@ -13,12 +13,17 @@ print("""
 7 - Ekran Kartı Değiştir
 8 - Depolama Miktarı Değiştir
 9 - PSU Watt Değiştir
-0 - Programdan Çıkış 
+10 - Bilgileri Dosyaya Kaydet
+0 - Programdan Çıkış
 
 """)
 
 while True:
-    x = int(input("Fonksiyon numarası girin: "))
+    try:
+        x = int(input("Fonksiyon numarası girin: "))
+    except ValueError:
+        print("Geçersiz seçim.")
+        continue
     if x == 0:
         break
     elif x == 1:
@@ -28,16 +33,41 @@ while True:
     elif x == 3:
         asus.kapat()
     elif x == 4:
-        asus.sahibi_degistir()
+        yeni = input("Yeni sahip: ")
+        asus.sahibi_degistir(yeni)
     elif x == 5:
-        asus.cpu_degistir()
+        yeni = input("Yeni işlemci: ")
+        asus.cpu_degistir(yeni)
     elif x == 6:
-        asus.ram_degistir()
+        yeni = input("Yeni ram listesi: (',' ile ayırarak girin:) ")
+        try:
+            ram_list = [int(i) for i in yeni.split(',') if i.strip()]
+        except ValueError:
+            print("Geçersiz ram değeri")
+            continue
+        asus.ram_degistir(ram_list)
     elif x == 7:
-        asus.gpu_degistir()
+        yeni = input("Yeni ekran kartı: ")
+        asus.gpu_degistir(yeni)
     elif x == 8:
-        asus.depolama_degistir()
+        try:
+            yeni = int(input("Yeni Depolama Miktarı: "))
+        except ValueError:
+            print("Geçersiz değer")
+            continue
+        asus.depolama_degistir(yeni)
     elif x == 9:
-        asus.psu_degistir()
+        try:
+            yeni = int(input("Yeni PSU WATT: "))
+        except ValueError:
+            print("Geçersiz değer")
+            continue
+        asus.psu_degistir(yeni)
+    elif x == 10:
+        dosya = input("Kaydedilecek dosya yolu: ")
+        try:
+            asus.kaydet_dosyaya(dosya)
+        except Exception as e:
+            print(f"Kaydetme hatası: {e}")
     else:
         print("Hatalı fonksiyon numarası")
