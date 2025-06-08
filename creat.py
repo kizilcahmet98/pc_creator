@@ -58,11 +58,11 @@ class Pc():
             print("Lütfen bilgisayarı kapatın.")
         else:
             yeni_depolama = input("Yeni Depolama Miktarı: ")
-            self.ram = yeni_depolama
+            self.depolama = yeni_depolama
 
     def psu_degistir(self):
         if self.durum == "Açık":
             print("Lütfen bilgisayarı kapatın.")
         else:
             yeni_psu = input("Yeni PSU WATT: ")
-            self.ram = yeni_psu
+            self.psu = yeni_psu
