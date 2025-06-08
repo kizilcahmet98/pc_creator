@@ -2,12 +2,14 @@
 
 Bu depo, temel OOP (nesne yönelimli programlama) pratiklerini denemek icin hazirlanmis basit bir **bilgisayar konfigürasyon** uygulamasi içerir. Amaci, sınıf yapısını ve metodlarla bir nesnenin durumunun nasil degistirilebilecegini gormek isteyenlere ornek saglamaktir.
 
+
 ## Dosya Yapisi
 
 1. **`create.py`**
    - `Pc` sinifini tanimlar. Bilgisayar sahibini ve CPU, RAM, GPU, depolama ile PSU gibi bilesenleri saklar.
    - Bilgisayari acma/kapatma (`calistir`, `kapat`) ve donanim bilgilerini degistirme (`cpu_degistir`, `ram_degistir`, `gpu_degistir`, vb.) gibi metotlar icerir.
    - Ornek amacli yazildigi icin girdi/çikti islemlerini `input()` ile dogrudan sinif icinde yapmaz; metotlar parametre alir.
+
 
 2. **`pc_creator.py`**
    - `Pc` sinifini kullanarak bir bilgisayar nesnesi olusturur.
