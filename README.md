@@ -4,7 +4,7 @@ Bu depo, temel OOP (nesne yönelimli programlama) pratiklerini denemek icin hazi
 
 ## Dosya Yapisi
 
-1. **`creat.py`**
+1. **`create.py`**
    - `Pc` sinifini tanimlar. Bilgisayar sahibini ve CPU, RAM, GPU, depolama ile PSU gibi bilesenleri saklar.
    - Bilgisayari acma/kapatma (`calistir`, `kapat`) ve donanim bilgilerini degistirme (`cpu_degistir`, `ram_degistir`, `gpu_degistir`, vb.) gibi metotlar icerir.
    - Ornek amacli yazildigi icin girdi/çıktı islemlerini `input()` ile dogrudan sinif icinde yapar ve Turkce mesajlar kullanir.
